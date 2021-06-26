@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.1.115:8848
+        file-extension: yml
+        enabled: true
+  application:
+    name: nacos-config
+  profiles:
+    active: dev
+#在 Nacos Spring Cloud 中，dataId 的完整格式如下：
+#  ${prefix}-${spring.profiles.active}.${file-extension} ； 例子： nacos-config-dev.yml
